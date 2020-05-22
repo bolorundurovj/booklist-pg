@@ -23,5 +23,8 @@
   "bugs": {
     "url": "https://github.com/bolorundurovj/booklist-pg/issues"
   },
-  "homepage": "https://github.com/bolorundurovj/booklist-pg#readme"
+  "homepage": "https://github.com/bolorundurovj/booklist-pg#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
 }

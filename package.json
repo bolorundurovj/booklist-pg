@@ -27,6 +27,7 @@
   "homepage": "https://github.com/bolorundurovj/booklist-pg#readme",
   "dependencies": {
     "express": "^4.17.1",
+    "mustache-express": "^1.3.0",
     "nodemon": "^2.0.4"
   }
 }

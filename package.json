@@ -1,0 +1,27 @@
+{
+  "name": "booklist-pg",
+  "version": "1.0.0",
+  "description": "A BookList WebApp in Node.JS with PostgreSQL",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bolorundurovj/booklist-pg.git"
+  },
+  "keywords": [
+    "node",
+    "nodejs",
+    "postgres",
+    "postgresql",
+    "book",
+    "booklist"
+  ],
+  "author": "Bolorunduro Valiant-Joshua",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/bolorundurovj/booklist-pg/issues"
+  },
+  "homepage": "https://github.com/bolorundurovj/booklist-pg#readme"
+}

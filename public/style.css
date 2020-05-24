@@ -45,5 +45,18 @@ table {
   border-collapse: collapse;
   border-spacing: 0; }
 
-p {
+body {
+  font-family: Helvetica, Verdana, sans-serif; }
+
+h1 {
+  font-size: 2em;
+  color: #ccc; }
+
+.list-page h1 {
   color: green; }
+
+.list-page p {
+  color: darkred; }
+
+.book-form h1 {
+  color: blue; }

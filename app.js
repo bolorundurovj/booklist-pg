@@ -17,6 +17,10 @@ app.get("/list", (req, res) => {
   res.render("list");
 });
 
+app.get("/book-form", (req, res) => {
+  res.render("book-form");
+});
+
 app.listen(PORT, () => {
   console.log(`Server running on http://localhost:${PORT}`);
 });

@@ -17,7 +17,7 @@ app.use(express.static("public"));
 app.use(bodyParser.urlencoded({ extended: false }));
 
 app.get("/list", (req, res) => {
-  res.render("list");
+  res.render("book-list");
 });
 
 app.get("/book/add", (req, res) => {

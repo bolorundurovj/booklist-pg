@@ -26,7 +26,7 @@ app.get("/books", (req, res) => {
   })
   .then((results) => {
     console.log('result?', results);
-    res.render("book-list", results);
+    res.render("book-list", {books: results.rows});
   })
   .catch((err) => {
     console.log('Error:', err);    
@@ -61,7 +61,7 @@ app.post("/book/add", (req, res) => {
   })
 });
 
-app.post('/books/delete/:id', (req, res) => {
+app.post('/book/delete/:id', (req, res) => {
   console.log('deleting book with id: ', req.params.id);
 
   const client = new Client();
@@ -73,6 +73,45 @@ app.post('/books/delete/:id', (req, res) => {
   })
   .then((result) => {
     console.log('deleted ?', result);
+    res.redirect("/books");
+  })
+  .catch((err) => {
+    console.log('Error:', err);    
+    res.redirect("/books");
+  })
+})
+
+app.get("/book/edit/:id", (req, res) => {
+  const client = new Client();
+  client.connect()
+  .then(() => {
+    console.log("connected to pg db");
+    const sql = 'SELECT * FROM books WHERE book_id = $1';
+    const params = [req.params.id]
+    return client.query(sql, params);
+  })
+  .then((results) => {
+    console.log('result?', results);
+    res.render("book-edit", {book: results.rows});
+  })
+  .catch((err) => {
+    console.log('Error:', err);    
+    res.send("Something bad happened");
+  })
+});
+
+app.post('/book/edit/:id', (req, res) => {
+  console.log('updating book with id: ', req.params.id);
+
+  const client = new Client();
+  client.connect()
+  .then(() => {
+    const sql = 'UPDATE books SET title = $1, authors = $2 WHERE book_id = $3';
+    const params = [req.body.title, req.body.authors, req.params.id]
+    return client.query(sql, params);
+  })
+  .then((result) => {
+    console.log('Edited ?', result);
     res.redirect("/books");
   })
   .catch((err) => {

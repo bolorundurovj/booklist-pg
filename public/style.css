@@ -46,11 +46,20 @@ table {
   border-spacing: 0; }
 
 body {
-  font-family: Helvetica, Verdana, sans-serif; }
+  font-family: Helvetica, Verdana, sans-serif;
+  padding-left: 1rem; }
 
 h1 {
   font-size: 2em;
   color: #ccc; }
+
+td {
+  padding: 5px;
+  border: solid gray;
+  border-width: 1px 0; }
+
+table {
+  margin: 1em 0; }
 
 .list-page h1 {
   color: green; }

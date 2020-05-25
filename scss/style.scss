@@ -5,11 +5,22 @@ $primary-color: #ccc;
 
 body{
     font-family: $font-stack;
+    padding-left: 1rem;
 }
 
 h1{
     font-size: 2em;
     color: $primary-color;
+}
+
+td{
+    padding: 5px;
+    border: solid gray;
+    border-width: 1px 0;
+}
+
+table{
+    margin: 1em 0;
 }
 
 @import 'list-page';
